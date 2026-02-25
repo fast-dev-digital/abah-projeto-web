@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   CLÍNICA ABAH — Design System / Tailwind 4 Theme
+   ═══════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Pastel Palette ── */
+  --color-abah-pink-50: #FFF0F3;
+  --color-abah-pink-100: #FFD6E0;
+  --color-abah-pink-200: #FFB3C6;
+  --color-abah-pink-300: #FF8FAB;
+  --color-abah-pink-400: #E8738A;
+  --color-abah-pink-500: #D45D74;
+
+  --color-abah-green-50: #EEFBF3;
+  --color-abah-green-100: #D1F5DD;
+  --color-abah-green-200: #A8E6C3;
+  --color-abah-green-300: #7DD3A8;
+  --color-abah-green-400: #5BBF8E;
+  --color-abah-green-500: #3DA874;
+
+  --color-abah-yellow-50: #FFFBEB;
+  --color-abah-yellow-100: #FFF3C4;
+  --color-abah-yellow-200: #FFE58F;
+  --color-abah-yellow-300: #FFD666;
+  --color-abah-yellow-400: #F2C14E;
+  --color-abah-yellow-500: #D4A83A;
+
+  --color-abah-blue-50: #EEF4FF;
+  --color-abah-blue-100: #D4E4FF;
+  --color-abah-blue-200: #AECBFF;
+  --color-abah-blue-300: #84B0FF;
+  --color-abah-blue-400: #6699EE;
+  --color-abah-blue-500: #4A7FD4;
+
+  /* ── Neutrals ── */
+  --color-abah-white: #FFFFFF;
+  --color-abah-offwhite: #FAF9F6;
+  --color-abah-cream: #F5F3EE;
+  --color-abah-gray-100: #F0EDEA;
+  --color-abah-gray-200: #E0DBD5;
+  --color-abah-gray-300: #C4BDB5;
+  --color-abah-gray-400: #9E9690;
+  --color-abah-gray-500: #726B64;
+  --color-abah-gray-600: #4A453F;
+  --color-abah-gray-700: #2D2924;
+  --color-abah-gray-800: #1A1714;
+
+  /* ── Typography ── */
+  --font-heading: 'Lexend', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* ── Shadows ── */
+  --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Global Base ── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-abah-offwhite);
+  color: var(--color-abah-gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-abah-gray-800);
+}
+
+/* ── Utility Classes ── */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.container-abah {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-abah-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-abah-gray-300);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-abah-gray-400);
+}

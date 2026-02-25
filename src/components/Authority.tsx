@@ -1,0 +1,101 @@
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { Award, BookOpen, Building2, Star } from 'lucide-react'
+
+const credentials = [
+  { icon: Award, label: 'Formação pela Unicamp' },
+  { icon: Building2, label: 'Corpo Clínico Unimed' },
+  { icon: BookOpen, label: 'Especialista em ABA' },
+  { icon: Star, label: 'Referência Regional' },
+]
+
+export default function Authority() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
+
+  return (
+    <section id="autoridade" className="section-padding bg-abah-offwhite relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-abah-blue-100 opacity-15 blur-3xl pointer-events-none" />
+
+      <div className="container-abah relative z-10" ref={ref}>
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="inline-block text-abah-pink-400 text-xs font-semibold font-heading uppercase tracking-widest mb-4"
+          >
+            Coordenação Técnica
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl md:text-4xl font-heading font-bold text-abah-gray-800 mb-5"
+          >
+            Liderança com{' '}
+            <span className="text-abah-blue-400">excelência acadêmica</span>
+          </motion.h2>
+        </div>
+
+        {/* Profile Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="bg-white rounded-3xl shadow-card border border-abah-gray-100 overflow-hidden">
+            <div className="grid md:grid-cols-5 gap-0">
+              {/* Photo placeholder */}
+              <div className="md:col-span-2 bg-gradient-to-br from-abah-blue-50 via-abah-pink-50 to-abah-green-50 flex items-center justify-center p-12 md:p-8 min-h-[300px]">
+                <div className="w-32 h-32 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-soft">
+                  <Award size={48} className="text-abah-blue-300" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-center">
+                <span className="text-abah-pink-400 text-xs font-semibold font-heading uppercase tracking-widest mb-2">
+                  Diretora Clínica
+                </span>
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-abah-gray-800 mb-4">
+                  Dra. Bárbara
+                </h3>
+                <p className="text-abah-gray-500 leading-relaxed mb-8">
+                  Com formação pela <strong className="text-abah-gray-700">Unicamp</strong> e 
+                  atuação como parte do corpo clínico <strong className="text-abah-gray-700">Unimed</strong>, 
+                  a Dra. Bárbara lidera a equipe clínica da ABAH com rigor 
+                  científico e sensibilidade humana. Sua experiência em 
+                  neurodivergência infantil e análise do comportamento aplicada 
+                  garante que cada protocolo siga os mais altos padrões de 
+                  qualidade e eficácia.
+                </p>
+
+                {/* Credentials */}
+                <div className="grid grid-cols-2 gap-4">
+                  {credentials.map((cred, i) => {
+                    const Icon = cred.icon
+                    return (
+                      <motion.div
+                        key={cred.label}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
+                        className="flex items-center gap-3 bg-abah-cream rounded-xl px-4 py-3"
+                      >
+                        <Icon size={18} className="text-abah-blue-400 flex-shrink-0" />
+                        <span className="text-abah-gray-600 text-sm font-medium">{cred.label}</span>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
