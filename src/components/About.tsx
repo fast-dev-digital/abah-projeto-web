@@ -71,17 +71,17 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="grid grid-cols-2 gap-4"
           >
-            <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-abah-pink-50 to-abah-blue-50 border border-abah-gray-100 flex items-center justify-center">
-              <p className="text-abah-gray-400 text-xs font-medium text-center px-4">Foto da Recepção</p>
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100">
+              <img src="/2recepcao.png" alt="Recepção da Clínica ABAH" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-abah-green-50 to-abah-yellow-50 border border-abah-gray-100 mt-8 flex items-center justify-center">
-              <p className="text-abah-gray-400 text-xs font-medium text-center px-4">Sala de Terapia</p>
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100 mt-8">
+              <img src="/3salaterapia.png" alt="Sala de Terapia" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-abah-yellow-50 to-abah-pink-50 border border-abah-gray-100 -mt-8 flex items-center justify-center">
-              <p className="text-abah-gray-400 text-xs font-medium text-center px-4">Espaço Sensorial</p>
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100 -mt-8">
+              <img src="/4sensorial.png" alt="Espaço Sensorial" className="w-full h-full object-cover" />
             </div>
-            <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-abah-blue-50 to-abah-green-50 border border-abah-gray-100 flex items-center justify-center">
-              <p className="text-abah-gray-400 text-xs font-medium text-center px-4">Área de Convivência</p>
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100">
+              <img src="/5convivencia.png" alt="Área de Convivência" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 

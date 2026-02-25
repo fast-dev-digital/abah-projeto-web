@@ -97,11 +97,12 @@ export default function Schools() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-abah-yellow-50 via-abah-green-50 to-abah-blue-50 border border-abah-gray-100 flex items-center justify-center">
-              <div className="text-center">
-                <School size={48} className="text-abah-yellow-300 mx-auto mb-4" />
-                <p className="text-abah-gray-400 text-sm font-medium">Imagem ilustrativa</p>
-              </div>
+            <div className="aspect-square rounded-3xl overflow-hidden border border-abah-gray-100">
+              <img
+                src="/7crianca.png"
+                alt="Criança em ambiente de inclusão escolar"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -top-4 -right-4 grid grid-cols-3 gap-2">
               {Array.from({ length: 9 }).map((_, i) => (

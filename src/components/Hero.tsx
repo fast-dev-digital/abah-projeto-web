@@ -111,20 +111,14 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative hidden lg:block"
           >
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-abah-pink-50 via-abah-blue-50 to-abah-green-50 border border-abah-gray-100">
-              {/* Placeholder content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8">
-                <div className="w-20 h-20 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-soft">
-                  <Heart size={32} className="text-abah-pink-300" />
-                </div>
-                <p className="text-abah-gray-400 text-sm font-medium text-center">
-                  Foto da estrutura da clínica
-                </p>
-              </div>
-
-              {/* Decorative elements */}
-              <div className="absolute top-6 right-6 w-16 h-16 rounded-xl bg-abah-yellow-200/50 backdrop-blur-sm" />
-              <div className="absolute bottom-12 left-6 w-12 h-12 rounded-full bg-abah-green-200/50 backdrop-blur-sm" />
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-abah-gray-100">
+              <img
+                src="/1colagem.png"
+                alt="Clínica ABAH — Estrutura e atendimento"
+                className="w-full h-full object-cover"
+              />
+              {/* Soft gradient overlay for polish */}
+              <div className="absolute inset-0 bg-gradient-to-t from-abah-offwhite/20 via-transparent to-transparent" />
             </div>
 
             {/* Floating card */}

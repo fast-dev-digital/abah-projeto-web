@@ -49,10 +49,12 @@ export default function Authority() {
           <div className="bg-white rounded-3xl shadow-card border border-abah-gray-100 overflow-hidden">
             <div className="grid md:grid-cols-5 gap-0">
               {/* Photo placeholder */}
-              <div className="md:col-span-2 bg-gradient-to-br from-abah-blue-50 via-abah-pink-50 to-abah-green-50 flex items-center justify-center p-12 md:p-8 min-h-[300px]">
-                <div className="w-32 h-32 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-soft">
-                  <Award size={48} className="text-abah-blue-300" />
-                </div>
+              <div className="md:col-span-2 overflow-hidden min-h-[300px]">
+                <img
+                  src="/6barbara.png"
+                  alt="Dra. Bárbara — Diretora Clínica da ABAH"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Content */}

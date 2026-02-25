@@ -17,7 +17,7 @@
 }
 
 .scroll-stack-inner {
-  padding: 20vh 5rem 50rem;
+  padding: 20vh 5rem 15rem;
   min-height: 100vh;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .scroll-stack-services .scroll-stack-inner {
-  padding: 2rem 1.5rem 40rem;
+  padding: 2rem 1.5rem 12rem;
   min-height: auto;
   max-width: 900px;
   margin: 0 auto;
@@ -68,7 +68,7 @@
 
 @media (min-width: 768px) {
   .scroll-stack-services .scroll-stack-inner {
-    padding: 2rem 2rem 45rem;
+    padding: 2rem 2rem 18rem;
   }
 }
 
