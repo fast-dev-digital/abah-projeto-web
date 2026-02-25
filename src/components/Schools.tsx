@@ -99,7 +99,7 @@ export default function Schools() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden border border-abah-gray-100">
               <img
-                src="/7crianca.png"
+                src="/7crianca.webp"
                 alt="Criança em ambiente de inclusão escolar"
                 className="w-full h-full object-cover"
               />

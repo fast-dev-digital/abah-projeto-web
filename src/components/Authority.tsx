@@ -51,7 +51,7 @@ export default function Authority() {
               {/* Photo placeholder */}
               <div className="md:col-span-2 overflow-hidden min-h-[300px]">
                 <img
-                  src="/6barbara.png"
+                  src="/6barbara.webp"
                   alt="Dra. Bárbara — Diretora Clínica da ABAH"
                   className="w-full h-full object-cover"
                 />
