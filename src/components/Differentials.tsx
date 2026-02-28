@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { HeartHandshake, GraduationCap, Users, CheckCircle2 } from 'lucide-react'
+import { HeartHandshake, GraduationCap, CheckCircle2 } from 'lucide-react'
 
 const features = [
   'Capacitação de pais para aplicação de estratégias em casa',
@@ -52,56 +52,52 @@ export default function Differentials() {
           </motion.p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Treinamento Parental */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative group bg-gradient-to-br from-abah-green-50 to-abah-blue-50 rounded-3xl p-10 border border-abah-green-100 hover:shadow-card transition-all duration-500"
-          >
-            <div className="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform duration-300">
-              <GraduationCap size={28} className="text-abah-green-400" />
-            </div>
-            <h3 className="font-heading font-bold text-2xl text-abah-gray-800 mb-4">
-              Treinamento Parental
-            </h3>
-            <p className="text-abah-gray-500 leading-relaxed mb-6">
-              Capacitamos os pais com técnicas baseadas em evidências para que 
-              possam dar continuidade às intervenções terapêuticas no ambiente 
-              doméstico, potencializando os resultados de cada sessão.
-            </p>
-            <div className="flex items-center gap-2 text-abah-green-400 font-heading font-semibold text-sm">
-              <Users size={16} />
-              <span>Sessões individuais e em grupo</span>
-            </div>
-          </motion.div>
+        {/* Destaque Absoluto: Acolhimento e Treinamento */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="relative group bg-gradient-to-r from-abah-yellow-50 via-white to-abah-pink-50 rounded-[2.5rem] p-10 md:p-14 border border-abah-yellow-100 shadow-xl mb-16 overflow-hidden flex flex-col md:flex-row items-center gap-10"
+        >
+          {/* Decorative backdrop */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-abah-pink-100 rounded-full blur-3xl opacity-40 mix-blend-multiply pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-abah-yellow-100 rounded-full blur-3xl opacity-40 mix-blend-multiply pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
 
-          {/* Acolhimento Familiar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.45 }}
-            className="relative group bg-gradient-to-br from-abah-pink-50 to-abah-yellow-50 rounded-3xl p-10 border border-abah-pink-100 hover:shadow-card transition-all duration-500"
-          >
-            <div className="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform duration-300">
-              <HeartHandshake size={28} className="text-abah-pink-400" />
+          {/* Icon Area */}
+          <div className="relative z-10 shrink-0">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-[2rem] bg-white shadow-soft flex items-center justify-center relative overflow-hidden group-hover:-translate-y-2 transition-transform duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-abah-pink-100 to-abah-yellow-100 opacity-50" />
+              <HeartHandshake size={48} className="text-abah-pink-400 relative z-10" />
             </div>
-            <h3 className="font-heading font-bold text-2xl text-abah-gray-800 mb-4">
-              Acolhimento Familiar
+            {/* Floating Mini Icon */}
+            <div className="absolute -bottom-4 -right-4 w-12 h-12 rounded-xl bg-abah-yellow-400 flex items-center justify-center shadow-md animate-bounce">
+              <GraduationCap size={24} className="text-white" />
+            </div>
+          </div>
+
+          {/* Copy Area */}
+          <div className="relative z-10 flex-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-white/80 backdrop-blur-md mb-6 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-abah-pink-400 animate-pulse" />
+              <span className="text-abah-pink-500 font-heading font-bold text-xs tracking-widest uppercase">
+                O Nosso Maior Diferencial
+              </span>
+            </div>
+            
+            <h3 className="font-heading font-bold text-3xl md:text-4xl text-abah-gray-800 mb-6 leading-tight">
+              Acolhimento Familiar & <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-abah-pink-400 to-abah-yellow-500">
+                Treinamento Parental
+              </span>
             </h3>
-            <p className="text-abah-gray-500 leading-relaxed mb-6">
-              Sabemos que o diagnóstico e o processo terapêutico impactam toda 
-              a família. Oferecemos um espaço seguro de escuta, orientação e 
-              conexão entre famílias que compartilham experiências semelhantes.
+            
+            <p className="text-abah-gray-600 text-lg leading-relaxed max-w-2xl font-light">
+              Sabemos que a evolução do seu filho não acontece apenas dentro do consultório. Por isso, oferecemos um <strong className="font-semibold text-abah-pink-500">verdadeiro porto seguro</strong> para a sua família. 
+              <br /><br />
+              Enquanto nossa equipe cuida da criança com excelência clínica, equipamos os pais com orientações práticas, suporte emocional e recursos valiosos para lidarem com os desafios do dia a dia, garantindo que o lar seja a extensão mais poderosa do tratamento.
             </p>
-            <div className="flex items-center gap-2 text-abah-pink-400 font-heading font-semibold text-sm">
-              <HeartHandshake size={16} />
-              <span>Apoio emocional contínuo</span>
-            </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Features List */}
         <motion.div

@@ -15,10 +15,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
-
-        {/* ── Modalidades ── */}
         <Services />
-
         <Differentials />
         <Authority />
         <Schools />
