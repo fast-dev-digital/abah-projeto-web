@@ -72,16 +72,16 @@ export default function About() {
             className="grid grid-cols-2 gap-4"
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100">
-              <img src="/2recepcao.webp" alt="Recepção da Clínica ABAH" className="w-full h-full object-cover" />
+              <img src="/2recepcao.webp" alt="Recepção da Clínica ABAH" className="w-full h-full object-cover" loading="lazy"/>
             </div>
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100 mt-8">
-              <img src="/3salaterapia.webp" alt="Sala de Terapia" className="w-full h-full object-cover" />
+              <img src="/3salaterapia.webp" alt="Sala de Terapia" className="w-full h-full object-cover" loading="lazy"/>
             </div>
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100 -mt-8">
-              <img src="/4sensorial.webp" alt="Espaço Sensorial" className="w-full h-full object-cover" />
+              <img src="/4sensorial.webp" alt="Espaço Sensorial" className="w-full h-full object-cover" loading="lazy"/>
             </div>
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-abah-gray-100">
-              <img src="/5convivencia.webp" alt="Área de Convivência" className="w-full h-full object-cover" />
+              <img src="/5convivencia.webp" alt="Área de Convivência" className="w-full h-full object-cover" loading="lazy"/>
             </div>
           </motion.div>
 

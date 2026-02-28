@@ -116,6 +116,7 @@ export default function Hero() {
                 src="/1colagem.webp"
                 alt="Clínica ABAH — Estrutura e atendimento"
                 className="w-full h-full object-cover"
+                fetchPriority="high"
               />
               {/* Soft gradient overlay for polish */}
               <div className="absolute inset-0 bg-gradient-to-t from-abah-offwhite/20 via-transparent to-transparent" />
