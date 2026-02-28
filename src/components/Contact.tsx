@@ -5,7 +5,7 @@ import { Send, Phone, MapPin, Clock, MessageCircle } from 'lucide-react'
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' })
+  const [formData, setFormData] = useState({ name: '', phone: '', childAge: '', message: '' })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -13,11 +13,15 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Future: n8n webhook integration
-    const whatsappMsg = encodeURIComponent(
-      `Olá! Sou ${formData.name}. ${formData.message}`
-    )
-    window.open(`https://wa.me/5500000000000?text=${whatsappMsg}`, '_blank')
+    
+    // Formata a mensagem para o WhatsApp
+    const message = `Olá! Meu nome é *${formData.name}*.\n\n` +
+                    `Gostaria de falar sobre o meu filho(a), que tem *${formData.childAge}*.\n\n` +
+                    `*Motivo do contato / Breve Relato:*\n${formData.message}`
+                    
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`
+    
+    window.open(whatsappUrl, '_blank')
   }
 
   return (
@@ -56,15 +60,15 @@ export default function Contact() {
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <label className="block text-abah-gray-600 text-sm font-medium mb-2">Nome completo</label>
+                <label className="block text-abah-gray-600 text-sm font-medium mb-2">Nome do Responsável</label>
                 <input
                   type="text" name="name" value={formData.name} onChange={handleChange} required
                   className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all"
-                  placeholder="Seu nome"
+                  placeholder="Seu nome completo"
                 />
               </div>
               <div>
-                <label className="block text-abah-gray-600 text-sm font-medium mb-2">Telefone</label>
+                <label className="block text-abah-gray-600 text-sm font-medium mb-2">Telefone/WhatsApp</label>
                 <input
                   type="tel" name="phone" value={formData.phone} onChange={handleChange} required
                   className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all"
@@ -73,19 +77,19 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <label className="block text-abah-gray-600 text-sm font-medium mb-2">E-mail</label>
+              <label className="block text-abah-gray-600 text-sm font-medium mb-2">Idade da Criança</label>
               <input
-                type="email" name="email" value={formData.email} onChange={handleChange} required
+                type="text" name="childAge" value={formData.childAge} onChange={handleChange} required
                 className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all"
-                placeholder="seu@email.com"
+                placeholder="Ex: 4 anos"
               />
             </div>
             <div>
-              <label className="block text-abah-gray-600 text-sm font-medium mb-2">Mensagem</label>
+              <label className="block text-abah-gray-600 text-sm font-medium mb-2">Motivo do Contato</label>
               <textarea
-                name="message" value={formData.message} onChange={handleChange} rows={4}
+                name="message" value={formData.message} onChange={handleChange} rows={4} required
                 className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all resize-none"
-                placeholder="Conte-nos sobre as necessidades do seu filho..."
+                placeholder="Conte-nos um pouco sobre a criança e como podemos ajudar..."
               />
             </div>
             <button
@@ -93,7 +97,7 @@ export default function Contact() {
               className="w-full flex items-center justify-center gap-2 bg-abah-green-300 hover:bg-abah-green-400 text-white font-heading font-semibold py-4 rounded-xl transition-all duration-300 hover:shadow-elevated"
             >
               <Send size={18} />
-              Enviar Mensagem
+              Enviar pelo WhatsApp
             </button>
           </motion.form>
 
