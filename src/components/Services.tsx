@@ -1,4 +1,4 @@
-import { MessageCircle, Brain, Activity, Hand, BookOpen } from 'lucide-react'
+import { MessageCircle, Brain, Activity, Hand, BookOpen, GraduationCap } from 'lucide-react'
 import ScrollStack, { ScrollStackItem } from '@/components/ScrollStack'
 
 const services = [
@@ -51,6 +51,17 @@ const services = [
     iconBg: '#FFB3C6',
     iconColor: '#D45D74',
     accentColor: '#E8738A',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Supervisão Profissional',
+    description:
+      'Orientação avançada e capacitação sob medida para profissionais de saúde e educação, focada em práticas baseadas em evidências.',
+    // Let's use a subtle sophisticated Purple color for Professionals to distinguish from kids 
+    gradient: 'linear-gradient(135deg, #F4F0FF 0%, #E6D9FF 100%)',
+    iconBg: '#CAB8FF',
+    iconColor: '#7B52D5',
+    accentColor: '#9B74F6',
   },
 ]
 
