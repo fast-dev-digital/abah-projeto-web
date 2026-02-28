@@ -8,7 +8,25 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', phone: '', childAge: '', message: '' })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    const { name, value } = e.target
+    
+    // Máscara para telefone: (XX) XXXXX-XXXX
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '').substring(0, 11)
+      let formatted = digits
+      
+      if (digits.length > 2) {
+        formatted = `(${digits.substring(0, 2)}) ${digits.substring(2)}`
+      }
+      if (digits.length > 7) {
+        formatted = `(${digits.substring(0, 2)}) ${digits.substring(2, 7)}-${digits.substring(7, 11)}`
+      }
+      
+      setFormData(prev => ({ ...prev, [name]: formatted }))
+      return
+    }
+    
+    setFormData(prev => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -94,7 +112,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 bg-abah-green-300 hover:bg-abah-green-400 text-white font-heading font-semibold py-4 rounded-xl transition-all duration-300 hover:shadow-elevated"
+              className="w-full flex items-center justify-center gap-2 bg-abah-green-300 hover:bg-abah-green-400 text-white font-heading font-semibold py-4 rounded-xl transition-all duration-300 hover:shadow-elevated cursor-pointer"
             >
               <Send size={18} />
               Enviar pelo WhatsApp
