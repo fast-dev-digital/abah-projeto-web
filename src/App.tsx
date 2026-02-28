@@ -6,6 +6,7 @@ import Authority from '@/components/Authority'
 import Schools from '@/components/Schools'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import CookieBanner from '@/components/CookieBanner'
 import Services from '@/components/Services'
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   )
 }
