@@ -9,10 +9,26 @@ export default function Hero() {
     >
       {/* Soft pastel blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-abah-pink-100 opacity-60 blur-3xl" />
-        <div className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-abah-blue-100 opacity-50 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[350px] h-[350px] rounded-full bg-abah-green-100 opacity-40 blur-3xl" />
-        <div className="absolute top-1/4 left-1/3 w-[300px] h-[300px] rounded-full bg-abah-yellow-100 opacity-30 blur-3xl" />
+        <motion.div
+          animate={{ x: [0, 30, 0], y: [0, -40, 0], scale: [1, 1.05, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-abah-pink-100 opacity-60 blur-3xl"
+        />
+        <motion.div
+          animate={{ x: [0, -20, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute top-1/2 -left-40 w-[400px] h-[400px] rounded-full bg-abah-blue-100 opacity-50 blur-3xl"
+        />
+        <motion.div
+          animate={{ x: [0, 25, 0], y: [0, 25, 0], scale: [1, 1.05, 1] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+          className="absolute bottom-0 right-1/4 w-[350px] h-[350px] rounded-full bg-abah-green-100 opacity-40 blur-3xl"
+        />
+        <motion.div
+          animate={{ x: [0, -30, 0], y: [0, -20, 0], scale: [1, 1.08, 1] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          className="absolute top-1/4 left-1/3 w-[300px] h-[300px] rounded-full bg-abah-yellow-100 opacity-30 blur-3xl"
+        />
       </div>
 
       <div className="container-abah relative z-10 pt-28 pb-20 lg:pt-32 lg:pb-28">
