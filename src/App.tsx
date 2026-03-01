@@ -12,6 +12,7 @@ import Services from '@/components/Services'
 import AboutPage from '@/pages/AboutPage'
 import ServicesPage from '@/pages/ServicesPage'
 import DifferentialsPage from '@/pages/DifferentialsPage'
+import ScrollToTop from '@/components/ScrollToTop'
 
 function HomePage() {
   return (
@@ -30,6 +31,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Header />
         <Routes>
