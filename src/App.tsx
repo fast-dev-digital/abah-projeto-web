@@ -10,6 +10,7 @@ import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
 import Services from '@/components/Services'
 import AboutPage from '@/pages/AboutPage'
+import ServicesPage from '@/pages/ServicesPage'
 
 function HomePage() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/clinica" element={<AboutPage />} />
+          <Route path="/modalidades" element={<ServicesPage />} />
         </Routes>
         <Footer />
         <CookieBanner />
