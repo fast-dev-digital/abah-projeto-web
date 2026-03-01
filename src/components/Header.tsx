@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'A Clínica', href: '#clinica' },
-  { label: 'Modalidades', href: '#modalidades' },
-  { label: 'Diferencial', href: '#diferencial' },
-  { label: 'Equipe', href: '#autoridade' },
-  { label: 'Escolas', href: '#escolas' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Início', href: '/#inicio' },
+  { label: 'A Clínica', href: '/clinica' },
+  { label: 'Modalidades', href: '/#modalidades' },
+  { label: 'Diferencial', href: '/#diferencial' },
+  { label: 'Equipe', href: '/#autoridade' },
+  { label: 'Escolas', href: '/#escolas' },
+  { label: 'Contato', href: '/#contato' },
 ]
 
 export default function Header() {
@@ -32,36 +33,36 @@ export default function Header() {
     >
       <div className="container-abah flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-3 group">
+        <Link to="/#inicio" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-abah-pink-200 to-abah-blue-200 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
             <span className="font-heading font-bold text-abah-gray-800 text-lg">A</span>
           </div>
           <span className="font-heading font-semibold text-xl text-abah-gray-800 tracking-tight">
             ABAH
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className="font-body text-sm font-medium text-abah-gray-500 hover:text-abah-gray-800 transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-abah-pink-300 after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* CTA Desktop */}
-        <a
-          href="#contato"
+        <Link
+          to="/#contato"
           className="hidden lg:flex items-center gap-2 bg-abah-green-300 hover:bg-abah-green-400 text-white font-heading font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-300 hover:shadow-card"
         >
           <Phone size={16} />
           Agendar Consulta
-        </a>
+        </Link>
 
         {/* Mobile Toggle */}
         <button
@@ -85,26 +86,30 @@ export default function Header() {
           >
             <nav className="container-abah py-6 flex flex-col gap-4">
               {navLinks.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="font-body text-base font-medium text-abah-gray-600 hover:text-abah-gray-800 py-2 border-b border-abah-gray-100 last:border-0 transition-colors"
+                  className="border-b border-abah-gray-100 last:border-0"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block font-body text-base font-medium text-abah-gray-600 hover:text-abah-gray-800 py-2 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
-              <a
-                href="#contato"
+              <Link
+                to="/#contato"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-2 bg-abah-green-300 text-white font-heading font-semibold text-sm px-6 py-3 rounded-full mt-2"
               >
                 <Phone size={16} />
                 Agendar Consulta
-              </a>
+              </Link>
             </nav>
           </motion.div>
         )}
