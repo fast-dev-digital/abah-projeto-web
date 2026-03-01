@@ -88,7 +88,7 @@ export default function Hero() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#clinica"
+                href="/clinica"
                 className="inline-flex items-center justify-center gap-2 border-2 border-abah-gray-200 hover:border-abah-pink-300 text-abah-gray-600 hover:text-abah-pink-500 font-heading font-medium px-8 py-4 rounded-full transition-all duration-300"
               >
                 <Heart size={16} />
