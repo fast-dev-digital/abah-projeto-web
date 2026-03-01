@@ -5,16 +5,17 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    // Se a rota não tiver um hash (ex: #contato), rola para o topo
+    // Se a rota não tiver um hash, rola para o topo com smooth scroll 
     if (!hash) {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      })
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        })
+      }, 100)
     } else {
-      // Se houver hash, tenta rolar suavemente até o elemento após um pequeno delay
-      // para garantir que a página renderizou (útil ao mudar de página para uma âncora)
+      // Se houver hash, rola suavemente até o elemento respectivo 
       setTimeout(() => {
         const id = hash.replace('#', '')
         const element = document.getElementById(id)
