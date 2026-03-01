@@ -72,7 +72,7 @@ export default function Services() {
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-abah-yellow-100 opacity-20 blur-3xl pointer-events-none" />
 
       {/* Section header */}
-      <div className="text-center max-w-2xl mx-auto pt-20 pb-4 px-6 relative z-10">
+      <div className="text-center max-w-2xl mx-auto pt-16 pb-0 px-6 relative z-10">
         <span className="inline-block text-abah-blue-400 text-xs font-semibold font-heading uppercase tracking-widest mb-4">
           Modalidades
         </span>
