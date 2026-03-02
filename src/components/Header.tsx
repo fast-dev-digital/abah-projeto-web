@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
-
+import { useScrollSpy } from '@/hooks/useScrollSpy'
 const navLinks = [
   { label: 'Início', href: '/#inicio' },
   { label: 'A Clínica', href: '/clinica' },
@@ -20,6 +20,16 @@ export default function Header() {
 
   // Concatena pathname + hash para entender onde o usuário está exatamente
   const currentPath = location.pathname + location.hash
+
+  const activeSection = useScrollSpy([
+    'inicio',
+    'clinica',
+    'modalidades',
+    'diferencial',
+    'autoridade',
+    'escolas',
+    'contato',
+  ])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -50,7 +60,13 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
             const isSpecialPage = ['A Clínica', 'Modalidades', 'Diferencial'].includes(link.label)
-            const isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
+            
+            let isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
+            if (location.pathname === '/' && activeSection) {
+              if (link.href === `/${activeSection}` || link.href === `/#${activeSection}`) {
+                isActive = true
+              }
+            }
             
             return (
               <Link
@@ -104,7 +120,13 @@ export default function Header() {
             <nav className="container-abah py-6 flex flex-col gap-2">
               {navLinks.map((link, i) => {
                 const isSpecialPage = ['A Clínica', 'Modalidades', 'Diferencial'].includes(link.label)
-                const isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
+                
+                let isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
+                if (location.pathname === '/' && activeSection) {
+                  if (link.href === `/${activeSection}` || link.href === `/#${activeSection}`) {
+                    isActive = true
+                  }
+                }
 
                 return (
                   <motion.div
