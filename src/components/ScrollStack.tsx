@@ -143,12 +143,12 @@ const ScrollStack = ({
         translateY = pinEnd - cardTop + stackPosPx + itemStackDistance * i;
       }
 
-      // ── Round aggressively to whole / half pixels to kill sub-pixel jitter ──
+      // ── Use sub-pixel precision for smooth touch scroll ──
       const rounded = {
-        translateY: Math.round(translateY),         // whole pixels only
-        scale: Math.round(scale * 1000) / 1000,     // 3 decimals
-        rotation: Math.round(rotation),              // whole degrees
-        blur: Math.round(blur),                      // whole px
+        translateY: Math.round(translateY * 100) / 100, 
+        scale: Math.round(scale * 1000) / 1000,     
+        rotation: Math.round(rotation * 100) / 100, 
+        blur: Math.round(blur),                      
       };
 
       // Skip DOM write when nothing visually changed
@@ -246,12 +246,17 @@ const ScrollStack = ({
     scrollTarget.addEventListener('scroll', onScroll, { passive: true });
 
     // Re-measure on resize (debounced)
+    // On mobile, height changes as URL bar hides/shows. We only care about width changes (orientation) to avoid jumps
     let resizeTimer: ReturnType<typeof setTimeout>;
+    let lastWidth = window.innerWidth;
     const onResize = () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        measureOffsets();
-        needsUpdateRef.current = true;
+        if (window.innerWidth !== lastWidth) {
+          lastWidth = window.innerWidth;
+          measureOffsets();
+          needsUpdateRef.current = true;
+        }
       }, 150);
     };
     window.addEventListener('resize', onResize);
