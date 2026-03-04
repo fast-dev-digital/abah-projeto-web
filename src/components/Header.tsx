@@ -48,12 +48,7 @@ export default function Header() {
       <div className="container-abah flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/#inicio" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-abah-pink-200 to-abah-blue-200 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-            <span className="font-heading font-bold text-abah-gray-800 text-lg">A</span>
-          </div>
-          <span className="font-heading font-semibold text-xl text-abah-gray-800 tracking-tight">
-            ABAH
-          </span>
+          <img src="/logo-ABAH.png" alt="Clínica ABAH Logo" className="h-14 md:h-16 w-auto object-contain scale-[1.2] md:scale-[1.4] origin-left transition-transform duration-300 group-hover:scale-[1.25] md:group-hover:scale-[1.45]" />
         </Link>
 
         {/* Desktop Nav */}

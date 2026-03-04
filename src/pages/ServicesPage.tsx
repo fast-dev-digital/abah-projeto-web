@@ -244,8 +244,10 @@ export default function ServicesPage() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-abah-pink-500/20 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4"></div>
           
           <div className="relative z-10 max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight">
-              A importância da <span className="text-transparent bg-clip-text bg-gradient-to-r from-abah-yellow-300 to-abah-pink-300">Intervenção Precoce</span>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-abah-yellow-300 to-abah-pink-300">
+                A importância da Intervenção Precoce
+              </span>
             </h2>
             <p className="text-ahab-gray-200 text-lg md:text-xl text-white/90 font-light leading-relaxed">
               O cérebro infantil possui uma neuroplasticidade impressionante nos primeiros anos de vida. Quanto mais cedo identificamos atrasos no desenvolvimento e iniciamos as terapias fundamentadas em ciência, maiores são as chances de ganho e adaptação. Não espere para ver; aja agora.

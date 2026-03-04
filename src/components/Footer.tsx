@@ -17,13 +17,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-abah-pink-300 to-abah-blue-300 flex items-center justify-center">
-                <span className="font-heading font-bold text-white text-lg">A</span>
-              </div>
-              <span className="font-heading font-semibold text-xl text-white tracking-tight">
-                ABAH
-              </span>
+            <div className="flex items-center gap-3 mb-4 w-fit">
+              <img src="/logo-ABAH.png" alt="Clínica ABAH Logo" className="h-16 w-auto object-contain drop-shadow" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
               Desenvolvimento infantil com base em evidências. Cuidado multidisciplinar 
