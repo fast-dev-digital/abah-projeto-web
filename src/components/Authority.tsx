@@ -1,11 +1,11 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Award, BookOpen, Building2, Star } from 'lucide-react'
+import { Award, BookOpen, Building2, Star, Linkedin } from 'lucide-react'
 
 const credentials = [
-  { icon: Award, label: 'Formação pela Unicamp' },
-  { icon: Building2, label: 'Corpo Clínico Unimed' },
-  { icon: BookOpen, label: 'Especialista em ABA' },
+  { icon: Award, label: 'Especialistas Qualificados' },
+  { icon: Building2, label: 'Abordagem Multidisciplinar' },
+  { icon: BookOpen, label: 'Intervenção com Evidência' },
   { icon: Star, label: 'Referência Regional' },
 ]
 
@@ -26,7 +26,7 @@ export default function Authority() {
             transition={{ duration: 0.5 }}
             className="inline-block text-abah-pink-400 text-xs font-semibold font-heading uppercase tracking-widest mb-4"
           >
-            Coordenação Técnica
+            Nossa Equipe
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -34,9 +34,12 @@ export default function Authority() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl font-heading font-bold text-abah-gray-800 mb-5"
           >
-            Liderança com{' '}
-            <span className="text-abah-blue-400">excelência acadêmica</span>
+            Profissionais{' '}
+            <span className="text-abah-blue-400">especializados</span>
           </motion.h2>
+          <p className="text-abah-gray-500 font-light text-lg">
+            A clínica conta com especialistas nas diversas áreas do desenvolvimento infantil, atuando de forma integrada para oferecer intervenções terapêuticas multidisciplinares de excelência.
+          </p>
         </div>
 
         {/* Profile Card */}
@@ -62,17 +65,19 @@ export default function Authority() {
                 <span className="text-abah-pink-400 text-xs font-semibold font-heading uppercase tracking-widest mb-2">
                   Diretora Clínica
                 </span>
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-abah-gray-800 mb-4">
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-abah-gray-800 mb-2">
                   Dra. Bárbara
                 </h3>
-                <p className="text-abah-gray-500 leading-relaxed mb-8">
-                  Com formação pela <strong className="text-abah-gray-700">Unicamp</strong> e 
-                  atuação como parte do corpo clínico <strong className="text-abah-gray-700">Unimed</strong>, 
-                  a Dra. Bárbara lidera a equipe clínica da ABAH com rigor 
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-abah-blue-500 hover:text-abah-blue-600 transition-colors text-sm font-medium mb-4">
+                  <Linkedin size={18} />
+                  <span>Ver perfil profissional</span>
+                </a>
+                <p className="text-abah-gray-500 leading-relaxed mb-6">
+                  A Dra. Bárbara coordena a equipe clínica da ABAH com rigor 
                   científico e sensibilidade humana. Sua experiência em 
-                  neurodivergência infantil e análise do comportamento aplicada 
-                  garante que cada protocolo siga os mais altos padrões de 
-                  qualidade e eficácia.
+                  neurodivergência infantil e Análise do Comportamento Aplicada (ABA) 
+                  garante que o nosso corpo clínico conduza cada protocolo seguindo os mais altos padrões de 
+                  qualidade e eficácia no cuidado especializado.
                 </p>
 
                 {/* Credentials */}

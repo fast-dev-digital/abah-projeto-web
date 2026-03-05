@@ -5,7 +5,7 @@ import {
   HeartHandshake,
   MessageCircleHeart,
   BookHeart,
-  GraduationCap,
+  Users,
   Sparkles,
   ChevronDown,
   ArrowRight
@@ -23,28 +23,28 @@ const staggerContainer: Variants = {
 
 const pillars = [
   {
-    title: 'Acolhimento e Escuta Ativa',
+    title: 'Acolhimento e escuta qualificada',
     description: 'Um espaço seguro sem julgamentos. Validamos seus sentimentos desde o diagnóstico até os desafios do dia a dia.',
     icon: MessageCircleHeart,
     color: 'bg-abah-pink-100',
     iconColor: 'text-abah-pink-500'
   },
   {
-    title: 'Treinamento Prático',
+    title: 'Treinamento prático',
     description: 'Aprenda estratégias baseadas em ciência para lidar com crises, estender habilidades e criar rotinas previsíveis e calmas em casa.',
     icon: HeartHandshake,
     color: 'bg-abah-yellow-100',
     iconColor: 'text-abah-yellow-600'
   },
   {
-    title: 'Acompanhamento Escolar',
-    description: 'Fazemos a ponte entre a clínica e as professoras. Orientamos a escola para garantir que o ambiente educacional seja inclusivo e eficaz.',
-    icon: GraduationCap,
+    title: 'Orientação familiar',
+    description: 'Suporte constante focado em estruturar o ambiente de casa e apoiar familiares para estimular o desenvolvimento com confiança e consistência.',
+    icon: Users,
     color: 'bg-abah-blue-100',
     iconColor: 'text-abah-blue-500'
   },
   {
-    title: 'Celebração de Pequenas Vitórias',
+    title: 'Celebração das pequenas conquistas',
     description: 'Cada avanço importa. Celebramos juntos cada novo aprendizado do seu filho, renovando as energias de toda a família.',
     icon: BookHeart,
     color: 'bg-abah-green-100',

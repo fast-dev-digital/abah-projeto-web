@@ -1,67 +1,62 @@
-import { MessageCircle, Brain, Activity, Hand, BookOpen, GraduationCap } from 'lucide-react'
+import { MessageCircle, Brain, Activity, Hand, BookOpen, Heart, Footprints, Music } from 'lucide-react'
 import ScrollStack, { ScrollStackItem } from '@/components/ScrollStack'
 
 const services = [
   {
+    icon: Heart,
+    title: 'Psicoterapia',
+    description: 'Acolhimento e suporte emocional focados no bem-estar.',
+    gradient: 'linear-gradient(135deg, #F4F0FF 0%, #E6D9FF 100%)',
+    iconBg: '#CAB8FF', iconColor: '#7B52D5', accentColor: '#9B74F6',
+  },
+  {
+    icon: Brain,
+    title: 'Psicologia com abordagem em Análise do Comportamento Aplicada (ABA)',
+    description: 'Suporte comportamental baseado na Análise do Comportamento Aplicada.',
+    gradient: 'linear-gradient(135deg, #EEF4FF 0%, #D4E4FF 100%)',
+    iconBg: '#AECBFF', iconColor: '#4A7FD4', accentColor: '#6699EE',
+  },
+  {
     icon: MessageCircle,
     title: 'Fonoaudiologia',
-    description:
-      'Avaliação e intervenção em linguagem, fala, comunicação e funções orofaciais, promovendo autonomia comunicativa.',
+    description: 'Avaliação e intervenção em linguagem, fala e comunicação.',
     gradient: 'linear-gradient(135deg, #FFF0F3 0%, #FFD6E0 100%)',
-    iconBg: '#FFB3C6',
-    iconColor: '#D45D74',
-    accentColor: '#E8738A',
+    iconBg: '#FFB3C6', iconColor: '#D45D74', accentColor: '#E8738A',
+  },
+  {
+    icon: Hand,
+    title: 'Terapia Ocupacional com abordagem em Integração Sensorial de Ayres, incluindo desenvolvimento de autonomia nas Atividades de Vida Diária (AVD) e Atividades de Vida Prática (AVP)',
+    description: 'Promoção da independência e integração sensorial.',
+    gradient: 'linear-gradient(135deg, #FFFBEB 0%, #FFF3C4 100%)',
+    iconBg: '#FFE58F', iconColor: '#D4A83A', accentColor: '#F2C14E',
   },
   {
     icon: Activity,
     title: 'Fisioterapia',
-    description:
-      'Desenvolvimento motor global, equilíbrio, coordenação e habilidades funcionais com enfoque lúdico e motivador.',
+    description: 'Desenvolvimento motor global, equilíbrio e coordenação.',
     gradient: 'linear-gradient(135deg, #EEFBF3 0%, #D1F5DD 100%)',
-    iconBg: '#A8E6C3',
-    iconColor: '#3DA874',
-    accentColor: '#5BBF8E',
-  },
-  {
-    icon: Brain,
-    title: 'Psicologia',
-    description:
-      'Suporte comportamental e emocional baseado em evidências, incluindo ABA aplicada e orientação parental.',
-    gradient: 'linear-gradient(135deg, #EEF4FF 0%, #D4E4FF 100%)',
-    iconBg: '#AECBFF',
-    iconColor: '#4A7FD4',
-    accentColor: '#6699EE',
-  },
-  {
-    icon: Hand,
-    title: 'Terapia Ocupacional',
-    description:
-      'Promoção da independência nas atividades do dia a dia, integração sensorial e desenvolvimento de habilidades adaptativas.',
-    gradient: 'linear-gradient(135deg, #FFFBEB 0%, #FFF3C4 100%)',
-    iconBg: '#FFE58F',
-    iconColor: '#D4A83A',
-    accentColor: '#F2C14E',
+    iconBg: '#A8E6C3', iconColor: '#3DA874', accentColor: '#5BBF8E',
   },
   {
     icon: BookOpen,
     title: 'Psicopedagogia',
-    description:
-      'Avaliação e intervenção nos processos de aprendizagem, respeitando o ritmo e o perfil cognitivo de cada criança.',
-    gradient: 'linear-gradient(135deg, #FFF0F3 0%, #EEF4FF 100%)',
-    iconBg: '#FFB3C6',
-    iconColor: '#D45D74',
-    accentColor: '#E8738A',
+    description: 'Avaliação e intervenção nos processos de aprendizagem.',
+    gradient: 'linear-gradient(135deg, #FFF0EE 0%, #FFE4DD 100%)',
+    iconBg: '#FFC8B8', iconColor: '#D47559', accentColor: '#E88B73',
   },
   {
-    icon: GraduationCap,
-    title: 'Supervisão Profissional',
-    description:
-      'Orientação avançada e capacitação sob medida para profissionais de saúde e educação, focada em práticas baseadas em evidências.',
-    // Let's use a subtle sophisticated Purple color for Professionals to distinguish from kids 
-    gradient: 'linear-gradient(135deg, #F4F0FF 0%, #E6D9FF 100%)',
-    iconBg: '#CAB8FF',
-    iconColor: '#7B52D5',
-    accentColor: '#9B74F6',
+    icon: Footprints,
+    title: 'Psicomotricidade',
+    description: 'Estimulação do desenvolvimento motor e afetivo.',
+    gradient: 'linear-gradient(135deg, #F0FFF4 0%, #D4FFDE 100%)',
+    iconBg: '#A8FFBF', iconColor: '#3DD474', accentColor: '#5BE88B',
+  },
+  {
+    icon: Music,
+    title: 'Musicoterapia',
+    description: 'Uso reflexivo da música para facilitar a comunicação.',
+    gradient: 'linear-gradient(135deg, #FFF0F3 0%, #EEF4FF 100%)',
+    iconBg: '#FFB3C6', iconColor: '#D45D74', accentColor: '#E8738A',
   },
 ]
 

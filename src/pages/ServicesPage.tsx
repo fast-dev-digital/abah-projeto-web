@@ -6,9 +6,11 @@ import {
   Hand,
   Activity,
   BookOpen,
-  Users,
   CheckCircle2,
-  ArrowRight
+  ArrowRight,
+  Heart,
+  Footprints,
+  Music
 } from 'lucide-react'
 
 const fadeInUp: Variants = {
@@ -23,59 +25,78 @@ const staggerContainer: Variants = {
 
 const services = [
   {
+    id: 'psicoterapia',
+    title: 'Psicoterapia',
+    icon: Heart,
+    color: 'bg-abah-pink-50',
+    borderColor: 'border-abah-pink-100',
+    iconColor: 'text-abah-pink-500',
+    description: [
+      'A Psicoterapia oferece um espaço seguro para explorar emoções, pensamentos e comportamentos no seu tempo.',
+      'Trabalhamos no enfrentamento de desafios emocionais e no desenvolvimento de habilidades de regulação.'
+    ],
+    benefits: [
+      'Promoção do autoconhecimento',
+      'Acolhimento e orientação familiar',
+      'Estratégias para ansiedade',
+      'Fortalecimento da autoestima'
+    ],
+    image: '/3salaterapia.webp'
+  },
+  {
     id: 'psicologia',
-    title: 'Psicologia (ABA)',
+    title: 'Psicologia com abordagem em Análise do Comportamento Aplicada (ABA)',
     icon: Brain,
     color: 'bg-abah-blue-50',
     borderColor: 'border-abah-blue-100',
     iconColor: 'text-abah-blue-500',
     description: [
-      'Nossa intervenção em Psicologia é fundamentada na Análise do Comportamento Aplicada (ABA). Trabalhamos para compreender e modificar comportamentos, ampliando o repertório de habilidades sociais, acadêmicas e de vida diária da criança.',
-      'O foco não é "curar" ou mascarar traços, mas sim promover autonomia, reduzir comportamentos que tragam prejuízo ao indivíduo e construir bases sólidas para a aprendizagem contínua, sempre em parceria com a família.'
+      'Nossa intervenção em Psicologia é fundamentada na Análise do Comportamento Aplicada (ABA). Trabalhamos para modificar comportamentos.',
+      'O foco é promover autonomia, reduzir comportamentos prejudiciais e construir bases para a aprendizagem contínua.'
     ],
     benefits: [
-      'Desenvolvimento de habilidades sociais e comunicação',
+      'Habilidades sociais e comunicação',
       'Redução de comportamentos desafiadores',
-      'Maior autonomia nas atividades de vida diária (AVDs)',
-      'Treinamento e empoderamento parental'
+      'Maior autonomia nas Atividades de Vida Diária',
+      'Empoderamento parental'
     ],
-    image: '/3salaterapia.webp' // Placeholder, ideal is to have a specific image
+    image: '/3salaterapia.webp'
   },
   {
     id: 'fonoaudiologia',
     title: 'Fonoaudiologia',
     icon: MessageSquare,
-    color: 'bg-abah-pink-50',
-    borderColor: 'border-abah-pink-100',
-    iconColor: 'text-abah-pink-500',
+    color: 'bg-abah-yellow-50',
+    borderColor: 'border-abah-yellow-100',
+    iconColor: 'text-abah-yellow-500',
     description: [
-      'A Fonoaudiologia na ABAH foca no desenvolvimento pleno da linguagem, fala e comunicação (seja ela verbal ou alternativa/aumentativa). Avaliamos e intervimos nas dificuldades de expressão, compreensão e articulação.',
-      'Além da comunicação, nossos especialistas atuam em questões de seletividade alimentar e motricidade orofacial, garantindo que a criança possa se alimentar com segurança e prazer, superando barreiras sensoriais ou motoras.'
+      'A Fonoaudiologia na ABAH foca no desenvolvimento da linguagem, fala e comunicação (verbal ou alternativa/aumentativa).',
+      'Além da comunicação, nossos especialistas atuam em questões de seletividade alimentar e motricidade orofacial.'
     ],
     benefits: [
-      'Estímulo à fala e linguagem compreensiva/expressiva',
+      'Estímulo à fala e linguagem',
       'Implementação de Comunicação Alternativa (CAA)',
-      'Tratamento de seletividade e recusa alimentar (Terapia Alimentar)',
-      'Melhora na articulação e clareza da fala'
+      'Terapia Alimentar',
+      'Melhora na clareza da fala'
     ],
-    image: '/2recepcao.webp' // Placeholder
+    image: '/2recepcao.webp'
   },
   {
     id: 'terapia-ocupacional',
-    title: 'Terapia Ocupacional',
+    title: 'Terapia Ocupacional com abordagem em Integração Sensorial de Ayres, incluindo desenvolvimento de autonomia nas Atividades de Vida Diária (AVD) e Atividades de Vida Prática (AVP)',
     icon: Hand,
     color: 'bg-abah-green-50',
     borderColor: 'border-abah-green-100',
     iconColor: 'text-abah-green-500',
     description: [
-      'A Terapia Ocupacional com Abordagem de Integração Sensorial de Ayres® ajuda a criança a processar, organizar e interpretar as informações que recebe do ambiente e do próprio corpo (tato, movimento, audição, visão).',
-      'Em nossa sala de integração sensorial de ponta, trabalhamos de forma lúdica desafios motores, coordenação, brincar e a regulação emocional, permitindo que a criança participe de suas ocupações diárias com conforto e independência.'
+      'A Terapia Ocupacional ajuda a criança a processar, organizar e interpretar as informações que recebe do ambiente e do próprio corpo.',
+      'Trabalhamos de forma lúdica os desafios motores, o brincar e a regulação emocional para promover a independência.'
     ],
     benefits: [
       'Regulação sensorial e emocional',
-      'Desenvolvimento da coordenação motora fina e grossa',
-      'Independência em atividades como vestir-se, comer e higiene',
-      'Aprimoramento das habilidades do brincar'
+      'Coordenação motora fina e grossa',
+      'Independência em AVDs e AVPs',
+      'Aprimoramento do brincar'
     ],
     image: '/4sensorial.webp'
   },
@@ -83,58 +104,77 @@ const services = [
     id: 'fisioterapia',
     title: 'Fisioterapia',
     icon: Activity,
-    color: 'bg-abah-yellow-50',
-    borderColor: 'border-abah-yellow-100',
-    iconColor: 'text-abah-yellow-500',
+    color: 'bg-abah-blue-50',
+    borderColor: 'border-abah-blue-100',
+    iconColor: 'text-abah-blue-500',
     description: [
-      'A Fisioterapia Neurofuncional/Pediátrica avalia e trata alterações motoras, buscando otimizar o movimento, a postura e o equilíbrio. Atuamos desde os primeiros meses para corrigir e estimular marcos do desenvolvimento motor.',
-      'Através de exercícios direcionados e lúdicos, fortalecemos a musculatura, melhoramos o controle postural e proporcionamos maior liberdade de movimento, o que impacta diretamente na exploração do ambiente e na cognição.'
+      'A Fisioterapia Pediátrica avalia e trata alterações motoras, buscando otimizar o movimento, a postura e o equilíbrio.',
+      'Através de exercícios direcionados e lúdicos, fortalecemos a musculatura e melhoramos o controle postural.'
     ],
     benefits: [
-      'Alcance de marcos motores (sentar, engatinhar, andar)',
-      'Melhora do tônus muscular flexibilidade e força',
-      'Aprimoramento do equilíbrio e coordenação global',
-      'Prevenção de deformidades ósseas e articulares'
+      'Alcance de marcos motores',
+      'Melhora do tônus e flexibilidade',
+      'Aprimoramento do equilíbrio e coordenação',
+      'Prevenção de deformidades articulares'
     ],
-    image: '/5convivencia.webp' // Placeholder
+    image: '/5convivencia.webp'
   },
   {
     id: 'psicopedagogia',
     title: 'Psicopedagogia',
     icon: BookOpen,
-    color: 'bg-abah-blue-50', // Reusing some colors or creating new ones
-    borderColor: 'border-abah-blue-100',
-    iconColor: 'text-abah-blue-500',
-    description: [
-      'A Psicopedagogia atua na interseção entre a aprendizagem e os processos cognitivos/emocionais. Investigamos como a criança aprende e quais são os obstáculos que dificultam esse processo no ambiente escolar e familiar.',
-      'Desenvolvemos estratégias personalizadas para superar dificuldades de atenção, memória, leitura, escrita e raciocínio lógico, sempre em constante diálogo com a escola e adaptação de materiais quando necessário.'
-    ],
-    benefits: [
-      'Superação de dificuldades de aprendizagem (dislexia, TDAH, etc)',
-      'Desenvolvimento de métodos de estudo adequados ao perfil do aluno',
-      'Estímulo das funções executivas (atenção, planejamento)',
-      'Orientação escolar e adaptação curricular'
-    ],
-    image: '/2recepcao.webp' // Placeholder
-  },
-  {
-    id: 'supervisao',
-    title: 'Supervisão Clínica',
-    icon: Users,
     color: 'bg-abah-pink-50',
     borderColor: 'border-abah-pink-100',
     iconColor: 'text-abah-pink-500',
     description: [
-      'Além do atendimento direto, a Clínica ABAH é um polo de formação e excelência. Oferecemos Supervisão Clínica para terapeutas e profissionais da equipe escolar que buscam aprimorar suas práticas analítico-comportamentais e neuromotoras.',
-      'Nossos especialistas seniores conduzem discussões de casos, análise de dados e revisão de programas de ensino, garantindo que outros profissionais apliquem intervenções baseadas em evidências com alto rigor técnico e ético.'
+      'A Psicopedagogia atua na interseção entre a aprendizagem e os processos cognitivos/emocionais no ambiente escolar e familiar.',
+      'Desenvolvemos estratégias personalizadas para superar dificuldades de atenção, memória, leitura, escrita e raciocínio lógico.'
     ],
     benefits: [
-      'Aprimoramento técnico e prático de profissionais',
-      'Alinhamento de condutas baseadas em ciência (Práticas Baseadas em Evidência)',
-      'Discussão aprofundada de casos complexos',
-      'Garantia de qualidade no serviço prestado por equipes externas'
+      'Superação de dificuldades de aprendizagem',
+      'Métodos de estudo adequados',
+      'Estímulo das funções executivas',
+      'Orientação escolar'
     ],
-    image: '/3salaterapia.webp' // Placeholder
+    image: '/2recepcao.webp'
+  },
+  {
+    id: 'psicomotricidade',
+    title: 'Psicomotricidade',
+    icon: Footprints,
+    color: 'bg-abah-green-50',
+    borderColor: 'border-abah-green-100',
+    iconColor: 'text-abah-green-500',
+    description: [
+      'A Psicomotricidade atua na integração entre movimento, intelecto e afeto. A criança expressa sentimentos e aprende sobre si.',
+      'Nossas sessões estimulam o esquema corporal, noções de ritmo, espaço e lateralidade através de vivências lúdicas.'
+    ],
+    benefits: [
+      'Melhora do esquema corporal',
+      'Desenvolvimento da organização espaço-temporal',
+      'Aprimoramento do equilíbrio global',
+      'Fortalecimento da expressividade emocional'
+    ],
+    image: '/4sensorial.webp'
+  },
+  {
+    id: 'musicoterapia',
+    title: 'Musicoterapia',
+    icon: Music,
+    color: 'bg-abah-yellow-50',
+    borderColor: 'border-abah-yellow-100',
+    iconColor: 'text-abah-yellow-500',
+    description: [
+      'A Musicoterapia utiliza a música e seus elementos para facilitar e promover a comunicação, relação, aprendizagem e mobilização.',
+      'É uma ferramenta terapêutica para trabalhar a regulação emocional e o desenvolvimento sensoriomotor de forma lúdica.'
+    ],
+    benefits: [
+      'Estímulo à comunicação verbal e não-verbal',
+      'Regulação emocional e redução de ansiedade',
+      'Aprimoramento da atenção auditiva',
+      'Desenvolvimento da criatividade'
+    ],
+    image: '/5convivencia.webp'
   }
 ]
 
