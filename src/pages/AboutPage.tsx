@@ -28,13 +28,13 @@ export default function AboutPage() {
             A Clínica
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-abah-gray-800 tracking-tight mb-6">
-            Nossa Casa,{' '}
+            Nosso Espaço,{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-abah-pink-400 to-abah-blue-400">
               Seu Porto Seguro
             </span>
           </h1>
           <p className="text-lg md:text-xl text-abah-gray-600 font-body leading-relaxed max-w-2xl mx-auto">
-            Mais do que um espaço de terapia, a Clínica ABAH foi desenhada para ser um ambiente seguro, acolhedor e altamente equipado para o desenvolvimento do seu filho.
+            Mais do que um espaço de terapia, a Clínica ABAH foi pensada para ser um ambiente seguro, acolhedor e estruturado para promover desenvolvimento, cuidado e confiança para pacientes e famílias.
           </p>
         </motion.div>
       </section>
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-abah-pink-50 p-4 rounded-2xl flex-1 border border-abah-pink-100">
                 <Heart className="text-abah-pink-400 mb-2" size={24} />
-                <h3 className="font-heading font-semibold text-abah-gray-800 mb-1">Afeto Familiar</h3>
+                <h3 className="font-heading font-semibold text-abah-gray-800 mb-1">Orientação Parental</h3>
                 <p className="text-sm text-abah-gray-600">Acolhimento aos pais e vínculo verdadeiro.</p>
               </div>
             </div>

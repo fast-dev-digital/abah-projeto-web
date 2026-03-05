@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react'
 const links = [
   { label: 'Início', href: '#inicio' },
   { label: 'A Clínica', href: '#clinica' },
-  { label: 'Modalidades', href: '#modalidades' },
+  { label: 'Especialidades', href: '#modalidades' },
   { label: 'Diferencial', href: '#diferencial' },
   { label: 'Equipe', href: '#autoridade' },
   { label: 'Escolas', href: '#escolas' },

@@ -6,7 +6,7 @@ import { useScrollSpy } from '@/hooks/useScrollSpy'
 const navLinks = [
   { label: 'Início', href: '/#inicio' },
   { label: 'A Clínica', href: '/clinica' },
-  { label: 'Modalidades', href: '/modalidades' },
+  { label: 'Especialidades', href: '/modalidades' },
   { label: 'Diferencial', href: '/diferencial' },
   { label: 'Equipe', href: '/#autoridade' },
   { label: 'Escolas', href: '/#escolas' },
@@ -24,7 +24,7 @@ export default function Header() {
   const activeSection = useScrollSpy([
     'inicio',
     'clinica',
-    'modalidades',
+    'especialidades',
     'diferencial',
     'autoridade',
     'escolas',
@@ -54,7 +54,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
-            const isSpecialPage = ['A Clínica', 'Modalidades', 'Diferencial'].includes(link.label)
+            const isSpecialPage = ['A Clínica', 'Especialidades', 'Diferencial'].includes(link.label)
             
             let isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
             if (location.pathname === '/' && activeSection) {

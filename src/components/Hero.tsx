@@ -44,7 +44,7 @@ export default function Hero() {
             >
               <Sparkles size={14} className="text-abah-pink-400" />
               <span className="text-abah-pink-500 text-xs font-semibold font-heading uppercase tracking-wider">
-                Excelência em Cuidado Infantil
+                Excelência em Cuidado Psicológico e Multidisciplinar
               </span>
             </motion.div>
 
@@ -55,7 +55,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold leading-[1.1] text-abah-gray-800 mb-6"
             >
-              Desenvolvimento Infantil{' '}
+              Desenvolvimento{' '}
               <span className="bg-gradient-to-r from-abah-pink-400 to-abah-blue-400 bg-clip-text text-transparent">
                 com Base em Evidências
               </span>
@@ -68,9 +68,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-lg md:text-xl text-abah-gray-500 leading-relaxed mb-10 font-light"
             >
-              Na Clínica ABAH, cada criança é única. Oferecemos uma abordagem 
-              multidisciplinar personalizada, com foco em ABA e terapias 
-              integradas, para que seu filho alcance todo o seu potencial.
+              Acreditamos que cada paciente é único. Na Clínica ABAH oferecemos abordagens multidisciplinares personalizadas, 
+              com foco em terapias integradas e baseadas em evidências, para que cada indivíduo alcance o máximo de seu potencial, 
+              autonomia e independência.
             </motion.p>
 
             {/* CTAs */}
