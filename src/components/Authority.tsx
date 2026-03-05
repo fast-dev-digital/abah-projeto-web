@@ -38,7 +38,7 @@ export default function Authority() {
             <span className="text-abah-blue-400">especializados</span>
           </motion.h2>
           <p className="text-abah-gray-500 font-light text-lg">
-            A clínica conta com especialistas nas diversas áreas do desenvolvimento infantil, atuando de forma integrada para oferecer intervenções terapêuticas multidisciplinares de excelência.
+            A clínica conta com profissionais especializados nas diferentes áreas do desenvolvimento e intervenção terapêutica multidisciplinar.
           </p>
         </div>
 

@@ -114,7 +114,7 @@ export default function Header() {
           >
             <nav className="container-abah py-6 flex flex-col gap-2">
               {navLinks.map((link, i) => {
-                const isSpecialPage = ['A Clínica', 'Modalidades', 'Diferencial'].includes(link.label)
+                const isSpecialPage = ['A Clínica', 'Especialidades', 'Diferencial'].includes(link.label)
                 
                 let isActive = link.href === currentPath || (currentPath === '/' && link.href === '/#inicio')
                 if (location.pathname === '/' && activeSection) {
