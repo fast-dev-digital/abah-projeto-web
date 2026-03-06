@@ -47,10 +47,12 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-white text-sm mb-4">Contato</h4>
             <ul className="space-y-2 text-sm">
-              <li>(00) 0000-0000</li>
-              <li>contato@clinicaabah.com.br</li>
-              <li>Rua Exemplo, 123 — Centro</li>
+              <li>(19) 99656-3759</li>
+              <li>abahortolandia@gmail.com  </li>
+              <li>Rua Júlio César do Nascimento, nº 446  
+                Jardim Adelaide – Hortolândia/SP CEP: 13.185-343  </li>
               <li>Seg-Sex: 8h às 18h</li>
+              <li>@abahortolandia</li>
             </ul>
           </div>
         </div>

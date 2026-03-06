@@ -37,7 +37,7 @@ export default function Contact() {
                     `Gostaria de falar sobre o meu filho(a), que tem *${formData.childAge}*.\n\n` +
                     `*Motivo do contato / Breve Relato:*\n${formData.message}`
                     
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5519996563759?text=${encodeURIComponent(message)}`
     
     window.open(whatsappUrl, '_blank')
   }
@@ -127,7 +127,7 @@ export default function Contact() {
             className="lg:col-span-2 space-y-6"
           >
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5519996563759"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-green-50 border border-green-200 rounded-2xl p-5 hover:shadow-card transition-all duration-300 group"
@@ -142,8 +142,8 @@ export default function Contact() {
             </a>
 
             {[
-              { icon: Phone, label: 'Telefone', value: '(00) 0000-0000' },
-              { icon: MapPin, label: 'Endereço', value: 'Rua Exemplo, 123 — Centro' },
+              { icon: Phone, label: 'Telefone', value: '(19) 99656-3759' },
+              { icon: MapPin, label: 'Endereço', value: 'Rua Júlio César do Nascimento, nº 446' },
               { icon: Clock, label: 'Horário', value: 'Seg-Sex: 8h às 18h' },
             ].map((info) => {
               const Icon = info.icon

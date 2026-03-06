@@ -68,7 +68,7 @@ export default function Authority() {
                 <h3 className="font-heading font-bold text-2xl md:text-3xl text-abah-gray-800 mb-2">
                   Dra. Bárbara
                 </h3>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-abah-blue-500 hover:text-abah-blue-600 transition-colors text-sm font-medium mb-4">
+                <a href="https://www.linkedin.com/in/b%C3%A1rbara-silva-a891a614a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-abah-blue-500 hover:text-abah-blue-600 transition-colors text-sm font-medium mb-4">
                   <Linkedin size={18} />
                   <span>Ver perfil profissional</span>
                 </a>
