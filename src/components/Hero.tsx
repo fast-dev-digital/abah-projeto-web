@@ -129,7 +129,7 @@ export default function Hero() {
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-abah-gray-100">
               <img
-                src="/1colagem.webp"
+                src="/foto1.webp"
                 alt="Clínica ABAH — Estrutura e atendimento"
                 className="w-full h-full object-cover"
                 fetchPriority="high"

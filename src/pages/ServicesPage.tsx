@@ -41,7 +41,7 @@ const services = [
       'Estratégias para ansiedade',
       'Fortalecimento da autoestima'
     ],
-    image: '/3salaterapia.webp'
+    image: '/foto3.webp'
   },
   {
     id: 'psicologia',
@@ -60,7 +60,7 @@ const services = [
       'Maior autonomia nas Atividades de Vida Diária',
       'Empoderamento parental'
     ],
-    image: '/3salaterapia.webp'
+    image: '/foto1.webp'
   },
   {
     id: 'fonoaudiologia',
@@ -79,7 +79,7 @@ const services = [
       'Terapia Alimentar',
       'Melhora na clareza da fala'
     ],
-    image: '/2recepcao.webp'
+    image: '/foto6.webp'
   },
   {
     id: 'terapia-ocupacional',
@@ -98,7 +98,7 @@ const services = [
       'Independência em AVDs e AVPs',
       'Aprimoramento do brincar'
     ],
-    image: '/4sensorial.webp'
+    image: '/foto4.webp'
   },
   {
     id: 'fisioterapia',
@@ -117,7 +117,7 @@ const services = [
       'Aprimoramento do equilíbrio e coordenação',
       'Prevenção de deformidades articulares'
     ],
-    image: '/5convivencia.webp'
+    image: '/foto5.webp'
   },
   {
     id: 'psicopedagogia',
@@ -136,7 +136,7 @@ const services = [
       'Estímulo das funções executivas',
       'Orientação escolar'
     ],
-    image: '/2recepcao.webp'
+    image: '/foto1.webp'
   },
   {
     id: 'psicomotricidade',
@@ -155,7 +155,7 @@ const services = [
       'Aprimoramento do equilíbrio global',
       'Fortalecimento da expressividade emocional'
     ],
-    image: '/4sensorial.webp'
+    image: '/foto4.webp'
   },
   {
     id: 'musicoterapia',
@@ -174,7 +174,7 @@ const services = [
       'Aprimoramento da atenção auditiva',
       'Desenvolvimento da criatividade'
     ],
-    image: '/5convivencia.webp'
+    image: '/foto5.webp'
   }
 ]
 

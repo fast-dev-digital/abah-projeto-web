@@ -77,7 +77,7 @@ export default function AboutPage() {
              {/* Substituir por uma foto ilustrativa do time ou logo da aba */}
              <div className="absolute inset-0 bg-gradient-to-tr from-abah-pink-200/40 to-abah-blue-200/40 z-0"></div>
              <img 
-               src="/2recepcao.webp" 
+               src="/foto2.webp" 
                alt="Acolhimento na Clínica" 
                loading="lazy"
                className="w-full h-full object-cover relative z-10"
@@ -113,60 +113,60 @@ export default function AboutPage() {
           {/* Recepção - Maior */}
           <motion.div variants={fadeInUp} className="md:col-span-2 md:row-span-2 relative rounded-3xl overflow-hidden group shadow-soft">
             <img 
-              src="/2recepcao.webp" 
+              src="/foto5.webp" 
               alt="Recepção Acolhedora" 
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-abah-gray-800/80 via-transparent to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-8">
-              <h3 className="text-white font-heading text-2xl font-semibold mb-2">Recepção Acolhedora</h3>
-              <p className="text-white/80 font-body">O primeiro abraço que a sua família recebe.</p>
+              <h3 className="!text-white text-white drop-shadow-md font-heading text-2xl font-semibold mb-2">Recepção Acolhedora</h3>
+              <p className="!text-white/90 text-white/90 drop-shadow-sm font-body">O primeiro abraço que a sua família recebe.</p>
             </div>
           </motion.div>
 
           {/* Sala Terapia */}
           <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden group shadow-soft">
             <img 
-              src="/3salaterapia.webp" 
+              src="/foto3.webp" 
               alt="Sala de Terapia" 
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-abah-gray-800/80 via-transparent to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
-              <h3 className="text-white font-heading text-lg font-semibold mb-1">Salas de Terapia</h3>
-              <p className="text-white/80 text-sm font-body">Preparadas para cada fase do desenvolvimento.</p>
+              <h3 className="!text-white text-white drop-shadow-md font-heading text-lg font-semibold mb-1">Salas de Terapia</h3>
+              <p className="!text-white/90 text-white/90 drop-shadow-sm text-sm font-body">Preparadas para cada fase do desenvolvimento.</p>
             </div>
           </motion.div>
 
           {/* Integração Sensorial */}
           <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden group shadow-soft">
             <img 
-              src="/4sensorial.webp" 
+              src="/foto4.webp" 
               alt="Sala de Integração Sensorial" 
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-abah-gray-800/80 via-transparent to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
-              <h3 className="text-white font-heading text-lg font-semibold mb-1">Integração Sensorial</h3>
-              <p className="text-white/80 text-sm font-body">Equipamentos de alto padrão.</p>
+              <h3 className="!text-white text-white drop-shadow-md font-heading text-lg font-semibold mb-1">Integração Sensorial</h3>
+              <p className="!text-white/90 text-white/90 drop-shadow-sm text-sm font-body">Equipamentos de alto padrão.</p>
             </div>
           </motion.div>
 
           {/* Convivência - Destaque largo na parte inferior */}
           <motion.div variants={fadeInUp} className="md:col-span-3 h-[300px] md:h-auto md:row-span-1 relative rounded-3xl overflow-hidden group shadow-soft">
             <img 
-              src="/5convivencia.webp" 
+              src="/foto1.webp" 
               alt="Espaço de Convivência" 
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-abah-gray-800/80 via-transparent to-transparent opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6 md:p-8">
-              <h3 className="text-white font-heading text-2xl font-semibold mb-2">Espaços de Convivência</h3>
-              <p className="text-white/80 font-body">Áreas de socialização seguras e estimulantes para interação.</p>
+              <h3 className="!text-white text-white drop-shadow-md font-heading text-2xl font-semibold mb-2">Espaços de Convivência</h3>
+              <p className="!text-white/90 text-white/90 drop-shadow-sm font-body">Áreas de socialização seguras e estimulantes para interação.</p>
             </div>
           </motion.div>
         </motion.div>
