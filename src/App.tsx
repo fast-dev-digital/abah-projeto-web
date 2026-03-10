@@ -37,7 +37,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/clinica" element={<AboutPage />} />
-          <Route path="/modalidades" element={<ServicesPage />} />
+          <Route path="/especialidades" element={<ServicesPage />} />
           <Route path="/diferencial" element={<DifferentialsPage />} />
         </Routes>
         <Footer />

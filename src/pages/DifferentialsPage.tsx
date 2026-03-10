@@ -100,7 +100,7 @@ export default function DifferentialsPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-abah-gray-600 font-body leading-relaxed max-w-2xl mx-auto">
-            A clínica ABAH não foca apenas na criança. Focamos na família. Um elo forte é criado quando os pais se sentem seguros, acolhidos e preparados.
+            A clínica ABAH não foca apenas no paciente. Focamos na família. Um elo forte é criado quando os pais se sentem seguros, acolhidos e preparados.
           </p>
         </motion.div>
       </section>

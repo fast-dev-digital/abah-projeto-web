@@ -6,7 +6,7 @@ import { useScrollSpy } from '@/hooks/useScrollSpy'
 const navLinks = [
   { label: 'Início', href: '/#inicio' },
   { label: 'A Clínica', href: '/clinica' },
-  { label: 'Especialidades', href: '/modalidades' },
+  { label: 'Especialidades', href: '/especialidades' },
   { label: 'Diferencial', href: '/diferencial' },
   { label: 'Equipe', href: '/#autoridade' },
   { label: 'Escolas', href: '/#escolas' },

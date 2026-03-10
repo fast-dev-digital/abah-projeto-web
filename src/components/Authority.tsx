@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Award, BookOpen, Building2, Star, Linkedin } from 'lucide-react'
+import { Award, BookOpen, Building2, Star } from 'lucide-react'
 
 const credentials = [
   { icon: Award, label: 'Especialistas Qualificados' },
@@ -50,54 +50,33 @@ export default function Authority() {
           className="max-w-4xl mx-auto"
         >
           <div className="bg-white rounded-3xl shadow-card border border-abah-gray-100 overflow-hidden">
-            <div className="grid md:grid-cols-5 gap-0">
-              {/* Photo placeholder */}
-              <div className="md:col-span-2 overflow-hidden min-h-[300px]">
-                <img
-                  src="/6barbara.webp"
-                  alt="Dra. Bárbara — Diretora Clínica da ABAH"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="p-8 md:p-12 flex flex-col items-center text-center">
+              <span className="text-abah-pink-400 text-sm font-semibold font-heading uppercase tracking-widest mb-4 border border-abah-pink-200 bg-abah-pink-50 px-4 py-1.5 rounded-full">
+                Nossa equipe
+              </span>
+              <p className="text-abah-gray-600 text-lg leading-relaxed max-w-3xl mb-12">
+                Contamos com uma equipe de profissionais especializados, preparados para atuar de forma ética, técnica e humanizada no atendimento das diferentes demandas relacionadas ao desenvolvimento e à saúde emocional.
+              </p>
 
-              {/* Content */}
-              <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-center">
-                <span className="text-abah-pink-400 text-xs font-semibold font-heading uppercase tracking-widest mb-2">
-                  Diretora Clínica
-                </span>
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-abah-gray-800 mb-2">
-                  Dra. Bárbara
-                </h3>
-                <a href="https://www.linkedin.com/in/b%C3%A1rbara-silva-a891a614a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-abah-blue-500 hover:text-abah-blue-600 transition-colors text-sm font-medium mb-4">
-                  <Linkedin size={18} />
-                  <span>Ver perfil profissional</span>
-                </a>
-                <p className="text-abah-gray-500 leading-relaxed mb-6">
-                  A Dra. Bárbara coordena a equipe clínica da ABAH com rigor 
-                  científico e sensibilidade humana. Sua experiência em 
-                  neurodivergência infantil e Análise do Comportamento Aplicada (ABA) 
-                  garante que o nosso corpo clínico conduza cada protocolo seguindo os mais altos padrões de 
-                  qualidade e eficácia no cuidado especializado.
-                </p>
-
-                {/* Credentials */}
-                <div className="grid grid-cols-2 gap-4">
-                  {credentials.map((cred, i) => {
-                    const Icon = cred.icon
-                    return (
-                      <motion.div
-                        key={cred.label}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
-                        className="flex items-center gap-3 bg-abah-cream rounded-xl px-4 py-3"
-                      >
-                        <Icon size={18} className="text-abah-blue-400 flex-shrink-0" />
-                        <span className="text-abah-gray-600 text-sm font-medium">{cred.label}</span>
-                      </motion.div>
-                    )
-                  })}
-                </div>
+              {/* Credentials */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+                {credentials.map((cred, i) => {
+                  const Icon = cred.icon
+                  return (
+                    <motion.div
+                      key={cred.label}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+                      className="flex flex-col items-center text-center gap-3 bg-abah-cream rounded-2xl p-6 transition-transform hover:-translate-y-1 hover:shadow-soft"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-abah-blue-100 flex items-center justify-center mb-2">
+                        <Icon size={24} className="text-abah-blue-500" />
+                      </div>
+                      <span className="text-abah-gray-800 font-heading font-semibold">{cred.label}</span>
+                    </motion.div>
+                  )
+                })}
               </div>
             </div>
           </div>

@@ -95,7 +95,7 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <label className="block text-abah-gray-600 text-sm font-medium mb-2">Idade da Criança</label>
+              <label className="block text-abah-gray-600 text-sm font-medium mb-2">Idade do Paciente</label>
               <input
                 type="text" name="childAge" value={formData.childAge} onChange={handleChange} required
                 className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all"
@@ -107,7 +107,7 @@ export default function Contact() {
               <textarea
                 name="message" value={formData.message} onChange={handleChange} rows={4} required
                 className="w-full bg-abah-cream border border-abah-gray-100 rounded-xl px-4 py-3 text-abah-gray-700 text-sm placeholder:text-abah-gray-400 focus:outline-none focus:ring-2 focus:ring-abah-green-200 focus:border-transparent transition-all resize-none"
-                placeholder="Conte-nos um pouco sobre a criança e como podemos ajudar..."
+                placeholder="Conte-nos um pouco sobre o paciente e como podemos ajudar..."
               />
             </div>
             <button

@@ -4,7 +4,7 @@ import { HeartHandshake, GraduationCap, CheckCircle2 } from 'lucide-react'
 
 const features = [
   'Capacitação de pais para aplicação de estratégias em casa',
-  'Workshops exclusivos sobre desenvolvimento infantil',
+  'Workshops exclusivos sobre desenvolvimento',
   'Suporte emocional e orientação contínua para a família',
   'Relatórios detalhados de evolução do tratamento',
   'Canal direto com a equipe terapêutica',
@@ -46,7 +46,7 @@ export default function Differentials() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-abah-gray-500 text-lg leading-relaxed font-light"
           >
-            Na ABAH, entendemos que a evolução da criança vai muito além das 
+            Na ABAH, entendemos que a evolução do paciente vai muito além das 
             sessões terapêuticas. Por isso, investimos no treinamento parental 
             e no acolhimento familiar como pilares do nosso tratamento.
           </motion.p>
@@ -94,7 +94,7 @@ export default function Differentials() {
             <p className="text-abah-gray-600 text-lg leading-relaxed max-w-2xl font-light">
               Sabemos que a evolução do seu filho não acontece apenas dentro do consultório. Por isso, oferecemos um <strong className="font-semibold text-abah-pink-500">verdadeiro porto seguro</strong> para a sua família. 
               <br /><br />
-              Enquanto nossa equipe cuida da criança com excelência clínica, equipamos os pais com orientações práticas, suporte emocional e recursos valiosos para lidarem com os desafios do dia a dia, garantindo que o lar seja a extensão mais poderosa do tratamento.
+              Enquanto nossa equipe cuida do paciente com excelência clínica, equipamos os pais com orientações práticas, suporte emocional e recursos valiosos para lidarem com os desafios do dia a dia, garantindo que o lar seja a extensão mais poderosa do tratamento.
             </p>
           </div>
         </motion.div>

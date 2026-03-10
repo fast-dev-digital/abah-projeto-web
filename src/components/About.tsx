@@ -13,7 +13,7 @@ const values = [
   {
     icon: Eye,
     title: 'Atenção Individualizada',
-    description: 'Cada plano terapêutico é desenhado para as necessidades específicas de cada criança.',
+    description: 'Cada plano terapêutico é desenhado para as necessidades específicas de cada paciente.',
     color: 'abah-pink',
   },
   {
@@ -58,7 +58,7 @@ export default function About() {
           >
             A Clínica ABAH foi concebida para ser muito mais do que um espaço terapêutico. 
             Cada detalhe do nosso ambiente foi projetado para transmitir segurança, conforto 
-            e confiança — tanto para as crianças quanto para as famílias.
+            e confiança, tanto para os pacientes quanto para suas famílias.
           </motion.p>
         </div>
 

@@ -89,7 +89,7 @@ const services = [
     borderColor: 'border-abah-green-100',
     iconColor: 'text-abah-green-500',
     description: [
-      'A Terapia Ocupacional ajuda a criança a processar, organizar e interpretar as informações que recebe do ambiente e do próprio corpo.',
+      'A Terapia Ocupacional ajuda o paciente a processar, organizar e interpretar as informações que recebe do ambiente e do próprio corpo.',
       'Trabalhamos de forma lúdica os desafios motores, o brincar e a regulação emocional para promover a independência.'
     ],
     benefits: [
@@ -146,7 +146,7 @@ const services = [
     borderColor: 'border-abah-green-100',
     iconColor: 'text-abah-green-500',
     description: [
-      'A Psicomotricidade atua na integração entre movimento, intelecto e afeto. A criança expressa sentimentos e aprende sobre si.',
+      'A Psicomotricidade atua na integração entre movimento, intelecto e afeto. O paciente expressa sentimentos e aprende sobre si.',
       'Nossas sessões estimulam o esquema corporal, noções de ritmo, espaço e lateralidade através de vivências lúdicas.'
     ],
     benefits: [
@@ -200,12 +200,12 @@ export default function ServicesPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-abah-gray-600 font-body leading-relaxed max-w-3xl mx-auto">
-            Acreditamos que o desenvolvimento infantil é plural. Por isso, nossas terapias não ocorrem de forma isolada; elas se conversam. Nossa equipe trabalha de modo transdisciplinar, focada inteiramente na evolução global da criança e na qualidade de vida da família.
+            Acreditamos que o desenvolvimento de nossos pacientes é plural. Por isso, nossas terapias não ocorrem de forma isolada; elas se conversam. Nossa equipe trabalha de modo transdisciplinar, focada inteiramente na evolução global do paciente e na qualidade de vida da família.
           </p>
         </motion.div>
       </section>
 
-      {/* Lista Detalhada de Modalidades (Alternating Layout) */}
+      {/* Lista Detalhada de Especialidades (Alternating Layout) */}
       <section className="container-abah py-12">
         <div className="space-y-24 md:space-y-32">
           {services.map((service, index) => {

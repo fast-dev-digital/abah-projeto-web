@@ -62,14 +62,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="modalidades" className="relative bg-abah-offwhite">
+    <section id="especialidades" className="relative bg-abah-offwhite">
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-abah-yellow-100 opacity-20 blur-3xl pointer-events-none" />
 
       {/* Section header */}
       <div className="text-center max-w-2xl mx-auto pt-16 pb-0 px-6 relative z-10">
         <span className="inline-block text-abah-blue-400 text-xs font-semibold font-heading uppercase tracking-widest mb-4">
-          Modalidades
+          Especialidades
         </span>
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-abah-gray-800 mb-5">
           Cuidado integrado,{' '}
@@ -78,7 +78,7 @@ export default function Services() {
         <p className="text-abah-gray-500 text-lg leading-relaxed font-light">
           Nossa equipe multidisciplinar trabalha de forma integrada,
           garantindo que cada intervenção seja complementar e potencialize
-          os resultados do desenvolvimento da criança.
+          os resultados do desenvolvimento do paciente.
         </p>
       </div>
 

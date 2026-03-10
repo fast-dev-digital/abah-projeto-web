@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react'
 const links = [
   { label: 'Início', href: '#inicio' },
   { label: 'A Clínica', href: '#clinica' },
-  { label: 'Especialidades', href: '#modalidades' },
+  { label: 'Especialidades', href: '#especialidades' },
   { label: 'Diferencial', href: '#diferencial' },
   { label: 'Equipe', href: '#autoridade' },
   { label: 'Escolas', href: '#escolas' },
@@ -21,8 +21,7 @@ export default function Footer() {
               <img src="/logo-ABAH.png" alt="Clínica ABAH Logo" className="h-16 w-auto object-contain drop-shadow" />
             </div>
             <p className="text-sm leading-relaxed max-w-xs">
-              Desenvolvimento infantil com base em evidências. Cuidado multidisciplinar 
-              para crianças neurodivergentes.
+              Desenvolvimento e cuidado em saúde com base em evidências, por meio de uma abordagem multidisciplinar centrada na singularidade de cada pessoa.
             </p>
           </div>
 
